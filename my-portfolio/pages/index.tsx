@@ -2,8 +2,9 @@ import NavBar from "@/components/NavBar";
 import Header from "@/components/Header";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
-import Timeline from "@/components/Timeline";
+import WorkExperience from "@/components/WorkExperience";
 import Portfolio from "@/components/Portfolio";
+import Extracurricular from "@/components/Extracurricular";
 
 export default function Home() {
   return (
@@ -21,12 +22,13 @@ export default function Home() {
             }}
           />
         </div>
-        <section className="Navbar">{<NavBar />}</section>
-        <section className="Main">{<Header />}</section>
-        <section className="About">{<About />}</section>
-        <section className="Skills">{<Skills />}</section>
-        <section className="Timeline">{<Timeline />}</section>
-        <section className="Portfolio">{<Portfolio />}</section>
+        <NavBar />
+        <Header />
+        <About />
+        <Skills />
+        <WorkExperience />
+        <Extracurricular />
+        <Portfolio />
         <div
           className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
           aria-hidden="true"

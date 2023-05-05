@@ -1,8 +1,15 @@
-import React from "react";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import getConfig from "next/config";
+import { FaDownload } from "react-icons/fa";
 
 type Props = {};
 
 const NavBar = (props: Props) => {
+  const { publicRuntimeConfig } = getConfig();
+
+  const pdfPath = publicRuntimeConfig.PDF_PATH;
+
   return (
     <div>
       <nav className="bg-transparent border-gray-200 dark:bg-transparent">
@@ -23,7 +30,7 @@ const NavBar = (props: Props) => {
             <svg
               className="w-6 h-6"
               aria-hidden="true"
-              fill="currentColor"
+              fill-rule="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -35,39 +42,64 @@ const NavBar = (props: Props) => {
             </svg>
           </button>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700 items-center">
               <li>
                 <a
-                  href="#"
+                  href="#home"
                   className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-[--color-theme] md:p-0"
-                  aria-current="page"
                 >
                   Home
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#about"
                   className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[--color-theme] md:p-0 dark:text-white dark:hover:text-[--color-theme]"
                 >
-                  About
+                  About Me
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#skills"
                   className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[--color-theme] md:p-0 dark:text-white dark:hover:text-[--color-theme]"
                 >
-                  Projects
+                  Skills
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#experience"
                   className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[--color-theme] md:p-0 dark:text-white dark:hover:text-[--color-theme]"
                 >
-                  Contacs
+                  Work Experience
                 </a>
+              </li>
+              <li>
+                <a
+                  href="#extracurricular"
+                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[--color-theme] md:p-0 dark:text-white dark:hover:text-[--color-theme]"
+                >
+                  Extracurriculars
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#portfolio"
+                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[--color-theme] md:p-0 dark:text-white dark:hover:text-[--color-theme]"
+                >
+                  Portfolio
+                </a>
+              </li>
+              <li>
+                <Link
+                  href={pdfPath}
+                  target="_blank"
+                  className="bg-[--color-theme] hover:bg-[--color-hover] text-white font-bold py-2 px-4 rounded flex items-center gap-2"
+                >
+                  <FaDownload />
+                  Resume
+                </Link>
               </li>
             </ul>
           </div>

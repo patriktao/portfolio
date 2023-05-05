@@ -5,9 +5,12 @@ type Props = {};
 
 const Skills = (props: Props) => {
   return (
-    <div className="relative overflow-hidden px-6 py-24 sm:py-24 lg:overflow-visible lg:px-0">
+    <div
+      id="skills"
+      className="overflow-hidden w-full h-screen lg:overflow-visible lg:px-0 grid items-center"
+    >
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-1 lg:items-start lg:gap-y-10">
-        <h1 className="text-6xl font-bold text-center">Skills</h1>
+        <h1 className="text-6xl font-bold text-center bg-gradient-to-r from-[--color-theme] to-green-400 bg-clip-text text-transparent">Skills</h1>
         <div className="flex flex-wrap gap-[1rem] justify-center">
           <Card
             header="Front End Development"
@@ -15,7 +18,7 @@ const Skills = (props: Props) => {
               <ul>
                 <li>Javascript (React, NextJS, React Native)</li>
                 <li>Typescript</li>
-                <li>HTML/CSS (SCSS)</li>
+                <li>HTML/CSS (SCSS, Tailwind)</li>
                 <li>Tailwind</li>
                 <li>Redux</li>
               </ul>

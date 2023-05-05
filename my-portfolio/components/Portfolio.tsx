@@ -1,13 +1,87 @@
-import React from 'react'
+import React from "react";
+import PortfolioItem from "./PortfolioItem";
+import portfolio from "../images/portfolio.png";
+import memberflow from "../images/memberflow.png";
+import acclab_login from "../images/acclab_login.png";
+import acclab_dash from "../images/acclab_dash.png";
+import acclab_inventory from "../images/acclab_inventory.png";
+import Image from "next/image";
+import ProjectImage from "./ProjectImage";
+import { FaDatabase, FaGithubSquare } from "react-icons/fa";
+import {
+  BsCodeSquare,
+  BsDatabase,
+  BsDatabaseAdd,
+  BsDatabaseDash,
+  BsDatabaseFill,
+} from "react-icons/bs";
 
-type Props = {}
+type Props = {};
 
 const Portfolio = (props: Props) => {
   return (
-    <div>
-        <h1 className="font-bold text-6xl text-center">Portfolio</h1>
+    <div
+      id="portfolio"
+      className="max-w-full min-h-screen snap-start lg:px-36 py-24 overflow-x-hidden items-center"
+    >
+      <h1 className="font-bold text-6xl text-center mb-12 bg-gradient-to-r from-[--color-theme] to-green-400 bg-clip-text text-transparent">
+        My Portfolio
+      </h1>
+      <ol className="relative border-l border-[--color-theme]">
+        <PortfolioItem
+          date="May 2022 - Current"
+          title="My Portfolio"
+          icon={<FaGithubSquare />}
+          link={"https://github.com/patriktao/portfolio"}
+          text={
+            "Designed and built my own portfolio website using Next.Js, Typescript, and Tailwind CSS"
+          }
+          images={<ProjectImage src={portfolio} title="portfolio" />}
+        />
+        <PortfolioItem
+          date="Aug 2022 - Current"
+          title="memberflow."
+          icon={<FaGithubSquare />}
+          link="https://github.com/patriktao/Next-MemberFlow/tree/development"
+          text={
+            " Developing cross-platform mobile and web applications to address current challenges for student organizations, providing a digital solution for student membership cards and streamlining membership management."
+          }
+          images={<ProjectImage src={memberflow} title="portfolio" />}
+        />
+        <PortfolioItem
+          date="Aug 2021 - May 2022"
+          title="Logistics Management System"
+          icon={
+            <div className="flex gap-0.5">
+              <a
+                href="https://github.com/patriktao/acclab-frontend"
+                target="_blank"
+              >
+                <BsCodeSquare />
+              </a>
+              <a
+                href="https://github.com/patriktao/acclab-backend"
+                target="_blank"
+              >
+                <BsDatabaseFill />
+              </a>
+            </div>
+          }
+          text={`Developed a logistics management system to automate and enhance
+            data storage, accessibility, visualization, and modification of
+            recipes for food & beverage prototypes, used internally by food
+            technologists.`}
+          images={
+            <div className="flex gap-4">
+              <ProjectImage src={acclab_login} title="acclab_login" />
+              <ProjectImage src={acclab_dash} title="acclab_dash" />
+              <ProjectImage src={acclab_inventory} title="acclab_inventory" />
+            </div>
+          }
+        ></PortfolioItem>
+      </ol>
     </div>
-  )
-}
+  );
+};
 
-export default Portfolio
+export default Portfolio;

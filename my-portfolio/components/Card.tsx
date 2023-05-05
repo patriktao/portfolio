@@ -9,7 +9,7 @@ interface Props {
 
 const Card = (props: Props) => {
   return (
-    <div className="min-w-full md:min-w-0 p-6 bg-transparent  rounded-lg shadow ">
+    <div className="min-w-full md:min-w-0 p-6 bg-transparent">
       <svg
         className="w-10 h-10 mb-2 text-gray-500 dark:text-gray-400"
         aria-hidden="true"
