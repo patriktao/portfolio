@@ -7,7 +7,7 @@ const WorkExperience = (props: Props) => {
   return (
     <div id="experience" className="py-24 grid items-center">
       <div>
-        <h1 className="mb-9 text-6xl text-center font-bold  bg-gradient-to-r from-[--color-theme] to-green-400 bg-clip-text text-transparent">Work Experience</h1>
+        <h1 className="mb-9 text-5xl md:text-6xl text-center font-bold  bg-gradient-to-r from-[--color-theme] to-green-400 bg-clip-text text-transparent">Work Experience</h1>
         <ol className="border-l border-neutral-300 dark:border-neutral-500 md:flex md:justify-center md:gap-6 md:border-l-0 md:border-t">
           <Timepoint date="Aug 2019" title="University Start" />
           <Timepoint

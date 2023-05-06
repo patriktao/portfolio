@@ -17,7 +17,7 @@ const Timepoint = ({ date, title, text, subtitle }: Props) => {
         </p>
       </div>
       <div className="ml-4 mt-2 pb-5 md:ml-0">
-        <h4 className="mb-2 text-xl font-semibold text-black dark:bg-gradient-to-r dark:from-[--color-theme] dark:to-green-400 dark:bg-clip-text dark:text-transparent">{title}</h4>
+        <h4 className="mb-2 text-xl font-semibold bg-gradient-to-r from-[--color-theme] to-green-400 bg-clip-text text-transparent dark:text-white">{title}</h4>
         <p className="block mb-2 text-lg font-medium leading-none text-gray-400 dark:text-gray-500">
           {subtitle}
         </p>

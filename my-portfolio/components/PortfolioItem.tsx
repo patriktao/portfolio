@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { BsGithub } from "react-icons/bs";
 import { FaGithub, FaGithubSquare } from "react-icons/fa";
@@ -6,7 +7,7 @@ interface Props {
   date?: String;
   title?: String;
   icon?: JSX.Element;
-  link?: string;
+  link?: String;
   text?: String;
   images?: JSX.Element;
 }
@@ -20,9 +21,9 @@ const PortfolioItem = ({ date, title, icon, link, text, images }: Props) => {
       </time>
       <div className="flex mt-1 mb-1.5">
         <div className="text-3xl pr-2">
-          <a href={link} target="_blank">
+          <Link href={`${link}`} target="_blank">
             {icon}
-          </a>
+          </Link>
         </div>
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
           {title}

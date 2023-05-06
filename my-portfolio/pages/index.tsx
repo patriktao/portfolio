@@ -22,13 +22,15 @@ export default function Home() {
             }}
           />
         </div>
-        <NavBar />
-        <Header />
-        <About />
-        <Skills />
-        <WorkExperience />
-        <Extracurricular />
-        <Portfolio />
+        <div className="flex flex-col flex-wrap">
+          <NavBar />
+          <Header />
+          <About />
+          <Skills />
+          <WorkExperience />
+          <Extracurricular />
+          <Portfolio />
+        </div>
         <div
           className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
           aria-hidden="true"

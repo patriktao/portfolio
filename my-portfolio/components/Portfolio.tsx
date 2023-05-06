@@ -5,16 +5,10 @@ import memberflow from "../images/memberflow.png";
 import acclab_login from "../images/acclab_login.png";
 import acclab_dash from "../images/acclab_dash.png";
 import acclab_inventory from "../images/acclab_inventory.png";
-import Image from "next/image";
 import ProjectImage from "./ProjectImage";
-import { FaDatabase, FaGithubSquare } from "react-icons/fa";
-import {
-  BsCodeSquare,
-  BsDatabase,
-  BsDatabaseAdd,
-  BsDatabaseDash,
-  BsDatabaseFill,
-} from "react-icons/bs";
+import { FaGithubSquare } from "react-icons/fa";
+import { BsCodeSquare, BsDatabaseFill } from "react-icons/bs";
+import Link from "next/link";
 
 type Props = {};
 
@@ -24,10 +18,10 @@ const Portfolio = (props: Props) => {
       id="portfolio"
       className="max-w-full min-h-screen snap-start lg:px-36 py-24 overflow-x-hidden items-center"
     >
-      <h1 className="font-bold text-6xl text-center mb-12 bg-gradient-to-r from-[--color-theme] to-green-400 bg-clip-text text-transparent">
+      <h1 className="font-bold text-5xl md:text-6xl text-center mb-12 bg-gradient-to-r from-[--color-theme] to-green-400 bg-clip-text text-transparent">
         My Portfolio
       </h1>
-      <ol className="relative border-l border-[--color-theme]">
+      <ol className="relative border-l border-[--color-theme] flex flex-col ">
         <PortfolioItem
           date="May 2022 - Current"
           title="My Portfolio"
@@ -53,18 +47,18 @@ const Portfolio = (props: Props) => {
           title="Logistics Management System"
           icon={
             <div className="flex gap-0.5">
-              <a
+              <Link
                 href="https://github.com/patriktao/acclab-frontend"
                 target="_blank"
               >
                 <BsCodeSquare />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://github.com/patriktao/acclab-backend"
                 target="_blank"
               >
                 <BsDatabaseFill />
-              </a>
+              </Link>
             </div>
           }
           text={`Developed a logistics management system to automate and enhance
@@ -72,7 +66,7 @@ const Portfolio = (props: Props) => {
             recipes for food & beverage prototypes, used internally by food
             technologists.`}
           images={
-            <div className="flex gap-4">
+            <div className="flex gap-4 md:flex-wrap">
               <ProjectImage src={acclab_login} title="acclab_login" />
               <ProjectImage src={acclab_dash} title="acclab_dash" />
               <ProjectImage src={acclab_inventory} title="acclab_inventory" />

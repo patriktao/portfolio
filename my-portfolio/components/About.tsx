@@ -17,7 +17,7 @@ const About = (props: Props) => {
               <p className="text-base font-semibold leading-7 bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent">
                 An Aspiring Software Engineer
               </p>
-              <h1 className="mt-2 text-6xl font-bold tracking-tight dark:text-white">
+              <h1 className="mt-2 text-5xl md:text-6xl font-bold tracking-tight dark:text-white">
                 About Me
               </h1>
               <p className="mt-6 mb-6 text-xl leading-8 dark:text-gray-300">
