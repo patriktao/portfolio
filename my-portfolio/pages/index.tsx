@@ -22,7 +22,7 @@ export default function Home() {
             }}
           />
         </div>
-        <div className="flex flex-col flex-wrap">
+        <div className="snap-y">
           <NavBar />
           <Header />
           <About />

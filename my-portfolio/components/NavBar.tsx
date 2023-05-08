@@ -14,7 +14,7 @@ const NavBar = (props: Props) => {
   return (
     <div>
       <nav className="bg-transparent border-gray-200 dark:bg-transparent">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
           <a href="" className="flex items-center">
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               Patrik Tao.

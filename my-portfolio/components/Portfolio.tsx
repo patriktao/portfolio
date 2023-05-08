@@ -16,17 +16,20 @@ const Portfolio = (props: Props) => {
   return (
     <div
       id="portfolio"
-      className="max-w-full min-h-screen snap-start lg:px-36 py-24 overflow-x-hidden items-center"
+      className="w-full min-h-screen snap-start py-12 overflow-x-hidden items-center"
     >
-      <h1 className="font-bold text-5xl md:text-6xl text-center mb-12 bg-gradient-to-r from-[--color-theme] to-green-400 bg-clip-text text-transparent">
+      <h1 className="font-bold text-5xl md:text-6xl  text-left lg:text-center mb-12 bg-gradient-to-r from-[--color-theme] to-green-400 bg-clip-text text-transparent">
         My Portfolio
       </h1>
       <ol className="relative border-l border-[--color-theme] flex flex-col ">
         <PortfolioItem
           date="May 2022 - Current"
           title="My Portfolio"
-          icon={<FaGithubSquare />}
-          link={"https://github.com/patriktao/portfolio"}
+          icon={
+            <Link href="https://github.com/patriktao/portfolio" target="_blank">
+              <FaGithubSquare />
+            </Link>
+          }
           text={
             "Designed and built my own portfolio website using Next.Js, Typescript, and Tailwind CSS"
           }
@@ -35,8 +38,14 @@ const Portfolio = (props: Props) => {
         <PortfolioItem
           date="Aug 2022 - Current"
           title="memberflow."
-          icon={<FaGithubSquare />}
-          link="https://github.com/patriktao/Next-MemberFlow/tree/development"
+          icon={
+            <Link
+              href="https://github.com/patriktao/Next-MemberFlow/tree/development"
+              target="_blank"
+            >
+              <FaGithubSquare />
+            </Link>
+          }
           text={
             " Developing cross-platform mobile and web applications to address current challenges for student organizations, providing a digital solution for student membership cards and streamlining membership management."
           }
