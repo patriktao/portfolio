@@ -39,3 +39,22 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0rem;
+  margin-top: 9rem;
+}
+
+@media (min-width: 1024px) {
+  section {
+    margin-bottom: 9rem;
+  }
+}
+
+.nav-font {
+  font-family: "Droid Sans";
+}
