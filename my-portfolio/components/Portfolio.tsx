@@ -10,23 +10,22 @@ import { FaGithubSquare } from "react-icons/fa";
 import { BsCodeSquare, BsDatabaseFill } from "react-icons/bs";
 import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
+import Image from "next/image";
+import ImageSlide2 from "./ImageSlide/ImageSlide2";
 
 type Props = {};
 
 const Portfolio = (props: Props) => {
   return (
-    <div
-      id="portfolio"
-      className="w-full min-h-screen snap-start py-12 overflow-x-hidden items-center"
-    >
+    <section id="portfolio" className="flex flex-wrap">
       <Fade delay={250} duration={2000} triggerOnce>
         <h1 className="font-bold text-5xl md:text-7xl  text-left lg:text-center mb-12 bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent">
           Portfolio
         </h1>
-        <ol className="relative border-l border-[--color-theme] flex flex-col ">
+        <ol className="relative border-l border-neutral-300 dark:border-neutral-500 flex flex-col ">
           <PortfolioItem
             date="May 2022 - Current"
-            title="My Portfolio"
+            title="Portfolio"
             icon={
               <Link
                 href="https://github.com/patriktao/portfolio"
@@ -42,7 +41,8 @@ const Portfolio = (props: Props) => {
           />
           <PortfolioItem
             date="Aug 2022 - Current"
-            title="memberflow."
+            title="Memberflow"
+            subtitle="East Asia Student Association"
             icon={
               <Link
                 href="https://github.com/patriktao/Next-MemberFlow/tree/development"
@@ -58,7 +58,8 @@ const Portfolio = (props: Props) => {
           />
           <PortfolioItem
             date="Aug 2021 - May 2022"
-            title="Logistics Management System"
+            title="Logistics Management Application"
+            subtitle="Tetra Pak"
             icon={
               <div className="flex gap-0.5">
                 <Link
@@ -80,16 +81,36 @@ const Portfolio = (props: Props) => {
             recipes for food & beverage prototypes, used internally by food
             technologists.`}
             images={
-              <div className="flex gap-4 md:flex-wrap">
-                <ProjectImage src={acclab_login} title="acclab_login" />
-                <ProjectImage src={acclab_dash} title="acclab_dash" />
-                <ProjectImage src={acclab_inventory} title="acclab_inventory" />
-              </div>
+              <ImageSlide2 />
+              /* <div
+                id="image-track"
+                data-mouse-down-at="0"
+                data-prev-percentage="0"
+              >
+                <Image
+                  className="image"
+                  alt="login"
+                  src={acclab_login}
+                  draggable="false"
+                />
+                <Image
+                  className="image"
+                  alt="dash"
+                  src={acclab_dash}
+                  draggable="false"
+                />
+                <Image
+                  className="image"
+                  alt="inv"
+                  src={acclab_inventory}
+                  draggable="false"
+                />
+              </div> */
             }
           ></PortfolioItem>
         </ol>
       </Fade>
-    </div>
+    </section>
   );
 };
 

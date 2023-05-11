@@ -1,8 +1,9 @@
+import { useRouter } from "next/router";
 import { useLayoutEffect, useState } from "react";
 
 const useScrollspy = (ids: string[], offset: number = 0) => {
   const [activeId, setActiveId] = useState("");
-
+  const router = useRouter();
   // Restrict value to be between the range [0, value]
   const clamp = (value: number) => Math.max(0, value);
 
@@ -31,7 +32,7 @@ const useScrollspy = (ids: string[], offset: number = 0) => {
     };
 
     listener();
-
+    
     window.addEventListener("resize", listener);
     window.addEventListener("scroll", listener);
 

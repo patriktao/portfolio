@@ -1,3 +1,4 @@
+import LowerNavBar from "@/components/LowerNavBar";
 import React, { ReactNode } from "react";
 
 interface Props {

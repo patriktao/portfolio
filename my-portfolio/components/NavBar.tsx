@@ -45,7 +45,11 @@ const NavBar = (props: Props) => {
     "portfolio",
   ];
 
-  const activeId = useScrollspy(ids, 100);
+  const activeId = useScrollspy(ids, 300);
+
+  if (typeof window !== "undefined") {
+    window.history.replaceState("Updated", activeId, `#${activeId}`);
+  }
 
   return (
     <div className="sticky top-0 px-6 pt-4 md:pt-14 nav-font z-40">
@@ -74,7 +78,7 @@ const NavBar = (props: Props) => {
               <Link
                 href={pdfPath}
                 target="_blank"
-                className="text-white font-bold py-1 px-3 rounded flex items-center gap-2 bg-gradient-to-r to-[--color-theme] from-green-300 cursor-pointer hover:scale-105 ease-in duration-100"
+                className="text-white font-bold py-1 px-3 rounded flex items-center gap-2 bg-gradient-to-r to-[--color-theme] from-green-300 cursor-pointer hover:scale-95 hover:opacity-80 ease-out duration-100"
               >
                 <FaDownload />
                 CV
