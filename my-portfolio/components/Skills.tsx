@@ -20,9 +20,11 @@ const Skills = (props: Props) => {
     >
       <Fade delay={250} duration={2000} triggerOnce>
         <div className="grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-1 lg:gap-y-10">
-          <h1 className="text-5xl md:text-7xl font-bold text-start md:text-center bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent">
-            Skills
-          </h1>
+          <div>
+            <h1 className="text-5xl md:text-7xl font-bold text-center bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent">
+              Skills
+            </h1>
+          </div>
           <div className="flex flex-wrap md:flex gap-y-8">
             <Card
               header="Front End Development"

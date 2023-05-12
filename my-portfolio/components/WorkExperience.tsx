@@ -9,7 +9,7 @@ const WorkExperience = (props: Props) => {
     <section id="experience">
       <div>
         <Fade delay={250} duration={2000} triggerOnce>
-          <h1 className="mb-12 text-5xl md:text-7xl text-left lg:text-center font-bold  bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent">
+          <h1 className="mb-12 text-5xl md:text-7xl text-left lg:ml-[10%] font-bold  bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent">
             Work Experience
           </h1>
           <Slide duration={1000}>
