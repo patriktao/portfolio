@@ -9,7 +9,7 @@ const Extracurricular = (props: Props) => {
     <section id="extracurricular">
       <div>
         <Fade delay={250} duration={2000} triggerOnce>
-          <h1 className="mb-12 text-5xl md:text-7xl  text-right lg:mr-[20%] font-bold bg-gradient-to-l from-green-400 to-[--color-theme] bg-clip-text text-transparent">
+          <h1 className="mb-12 px-8 lg:px-0 text-5xl md:text-7xl text-left lg:text-right  lg:mr-[20%] font-bold bg-gradient-to-l from-green-400 to-[--color-theme] bg-clip-text text-transparent">
             Extracurricular
           </h1>
           <Slide duration={1000} direction="right">
@@ -28,7 +28,7 @@ const Extracurricular = (props: Props) => {
               />
               <Timepoint
                 date="2021 - 2022"
-                title="Head of IT"
+                title="Head of Information Technology"
                 subtitle="East Asia Student Association"
                 text="Created and maintained the website and provided IT support to the organisation"
               />

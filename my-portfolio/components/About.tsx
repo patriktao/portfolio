@@ -35,7 +35,7 @@ const About = (props: Props) => {
             </Fade>
           </div>
           <div className="grid items-center">
-            <Fade delay={250} duration={3000}>
+            <Fade delay={250} duration={3000} triggerOnce>
               <Image
                 className="rounded-lg grid items-center"
                 src={aboutme}

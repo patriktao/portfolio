@@ -31,7 +31,7 @@ function capitalize(str: string) {
 
 const menuItemClass = `font-medium block py-2 pl-3 pr-4 text-gray-700 rounded md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:hover:bg-gradient-to-r from-green-400 to-[--color-theme] md:hover:bg-clip-text md:hover:text-transparent hover:scale-110 ease-out duration-100`;
 
-const selectedMenuItemClass = `font-medium block py-2 pl-3 pr-4 md:border-0 md:p-0 bg-gradient-to-r from-green-300 to-[--color-theme] bg-clip-text text-transparent `;
+const selectedMenuItemClass = `font-medium block py-2 pl-3 pr-4 md:border-0 md:p-0 bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent `;
 
 const LowerNavBar = (props: Props) => {
   const activeId = useScrollspy(ids, 300);
@@ -54,7 +54,7 @@ const LowerNavBar = (props: Props) => {
         ))}
         <li>
           <a href={pdfPath} target="_blank" className={menuItemClass}>
-            <p>Get Resume</p>
+              <p>&#62; Get Resume</p>
           </a>
         </li>
       </ul>
