@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 :root {
+  font-family: "Inter", "Man Rope", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", "Man Rope" sans-serif;
+  }
+}
+
+:root {
   --foreground-rgb: 30, 41, 59;
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
@@ -26,7 +35,6 @@
 }
 
 body {
-  font-family: "Man Rope", sans-serif;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
