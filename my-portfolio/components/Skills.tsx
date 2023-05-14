@@ -27,7 +27,7 @@ const Skills = (props: Props) => {
           </div>
           <div className="flex flex-wrap md:flex gap-y-8">
             <Card
-              header="Front End Development"
+              header="Front-end"
               text={
                 <ul>
                   <li>Javascript (React, NextJS, React Native)</li>
@@ -40,7 +40,7 @@ const Skills = (props: Props) => {
               icon={<BsCodeSquare />}
             />
             <Card
-              header="Back End Development"
+              header="Back-end"
               text={
                 <ul>
                   <li>Java</li>
