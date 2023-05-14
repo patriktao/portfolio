@@ -33,7 +33,7 @@ const Header = (props: Props) => {
       <div className="max-w-[1240px] mx-auto p-2 flex flex-wrap md:flex-nowrap items-center justify-center lg:mt-0 gap-8 lg:gap-0">
         <div>
           <Fade delay={1000} cascade damping={0.2} duration={3000} triggerOnce>
-            <p className="uppercase text-sm tracking-widest mb-4">
+            <p className="uppercase text-sm tracking-widest mb-4 font-semibold">
               Let&#39;s build something{" "}
               <span className="bg-gradient-to-r from-green-300 to-[--color-theme] bg-clip-text text-transparent">
                 together.
@@ -51,7 +51,7 @@ const Header = (props: Props) => {
               Nice to Meet You.
             </p>
 
-            <p className="text-lg text-gray-800 sm:max-w-[75%] lg:max-w-[65%] dark:text-gray-300 text-left">
+            <p className="text-lg font-semibold text-gray-800 sm:max-w-[75%] lg:max-w-[65%] dark:text-gray-300 text-left">
               I’m focused on building user-friendly front-end applications and
               scalable back-end software. I am a fourth year Computer Science
               student at Lund University in Sweden.
@@ -101,7 +101,7 @@ const Header = (props: Props) => {
             data-tooltip-target="tooltip-default"
             src={profile}
             alt="profile"
-            className="rounded-lg lg:w-[32rem] sm:w-[46rem] h-auto w-[18rem] hover:scale-105 ease-out duration-100"
+            className="rounded-lg lg:w-[32rem] sm:w-[20rem] md:w-[52rem] h-auto w-[18rem] hover:scale-105 duration-100"
           />
         </Fade>
       </div>

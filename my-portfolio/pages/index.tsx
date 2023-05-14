@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <Background>
       <NavBar />
-      <div className="z-10 flex flex-col flex-wrap pt-40 sm:py-0">
+      <div className="z-10 inline-block flex flex-col flex-wrap pt-40 sm:py-0">
         <Header />
         <About />
         <Skills />

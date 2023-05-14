@@ -29,9 +29,9 @@ function capitalize(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-const menuItemClass = `block py-2 pl-3 pr-4 text-gray-700 rounded md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:hover:bg-gradient-to-r from-green-400 to-[--color-theme] md:hover:bg-clip-text md:hover:text-transparent hover:scale-110 ease-out duration-100`;
+const menuItemClass = `font-medium block py-2 pl-3 pr-4 text-gray-700 rounded md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:hover:bg-gradient-to-r from-green-400 to-[--color-theme] md:hover:bg-clip-text md:hover:text-transparent hover:scale-110 ease-out duration-100`;
 
-const selectedMenuItemClass = `block py-2 pl-3 pr-4 md:border-0 md:p-0 bg-gradient-to-r from-green-300 to-[--color-theme] bg-clip-text text-transparent `;
+const selectedMenuItemClass = `font-medium block py-2 pl-3 pr-4 md:border-0 md:p-0 bg-gradient-to-r from-green-300 to-[--color-theme] bg-clip-text text-transparent `;
 
 const LowerNavBar = (props: Props) => {
   const activeId = useScrollspy(ids, 300);
@@ -39,7 +39,7 @@ const LowerNavBar = (props: Props) => {
   const pdfPath = publicRuntimeConfig.PDF_PATH;
 
   if (typeof window !== "undefined") {
-    window.history.replaceState("Updated", activeId, `#${activeId}`);
+    window.history.pushState("Updated", activeId, `#${activeId}`);
   }
 
   return (
@@ -54,7 +54,7 @@ const LowerNavBar = (props: Props) => {
         ))}
         <li>
           <a href={pdfPath} target="_blank" className={menuItemClass}>
-            Get Resume
+            <p>Get Resume</p>
           </a>
         </li>
       </ul>
