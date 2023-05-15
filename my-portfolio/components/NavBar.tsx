@@ -3,6 +3,7 @@ import getConfig from "next/config";
 import { AiOutlineMenu } from "react-icons/ai";
 import useScrollspy from "@/hooks/useScrollspy";
 import { Fade } from "react-awesome-reveal";
+import Link from "next/link";
 
 const NavBar = () => {
   const ids = [
@@ -25,9 +26,11 @@ const NavBar = () => {
       <Fade delay={500} triggerOnce>
         <nav className="bg-transparent border-gray-200 dark:bg-transparent">
           <div className="max-w-screen-xl flex justify-between mx-auto">
-            <span className="lg:pl-12 self-center text-2xl font-semibold whitespace-nowrap dark:text-white text-gray-700">
-              Patrik Tao
-            </span>
+            <a href={"#home"}>
+              <span className="lg:pl-10 text-2xl font-semibold whitespace-nowrap dark:text-white text-gray-700 hover:bg-gradient-to-r hover:from-green-400 hover:to-[--color-theme] hover:bg-clip-text hover:text-transparent">
+                &#62; Patrik Tao
+              </span>
+            </a>
             <button
               data-collapse-toggle="navbar-default"
               type="button"

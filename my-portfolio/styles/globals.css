@@ -7,9 +7,10 @@
 :root {
   font-family: "Inter", "Man Rope", sans-serif;
 }
+
 @supports (font-variation-settings: normal) {
   :root {
-    font-family: "Inter var", "Man Rope" sans-serif;
+    font-family: "Inter var", sans-serif;
   }
 }
 
@@ -51,16 +52,9 @@ html {
 }
 
 section {
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-bottom: 0rem;
-  padding-top: 9rem;
-}
-
-@media (min-width: 1024px) {
-  section {
-    padding-bottom: 9rem;
-  }
+  margin-bottom: 9rem;
+  margin-top: 9rem;
 }

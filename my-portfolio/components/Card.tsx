@@ -9,7 +9,7 @@ interface Props {
 
 const Card = (props: Props) => {
   return (
-    <div className="min-w-full md:min-w-0 md:px-6 bg-transparent flex flex-col items-center">
+    <div className="min-w-full md:min-w-0 bg-transparent flex flex-col items-center">
       <div className="text-3xl mb-4 text-gray-500 dark:text-gray-400">
         {props.icon}
       </div>

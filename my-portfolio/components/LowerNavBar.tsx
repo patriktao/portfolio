@@ -2,6 +2,7 @@ import useScrollspy from "@/hooks/useScrollspy";
 import getConfig from "next/config";
 import Link from "next/link";
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 import { FaDownload } from "react-icons/fa";
 
 type Props = {};
@@ -43,21 +44,25 @@ const LowerNavBar = (props: Props) => {
   }
 
   return (
-    <div className="fixed bottom-0 right-0 h-screen w-1/4 mr-[6%] mb-[6%] md:p-0 mt-4 justify-end items-end flex-col hidden md:flex">
-      <ul className="text-xl">
-        {ids.map((id) => (
-          <NavItem
-            name={capitalize(id)}
-            key={`menu-item-${id}`}
-            className={id === activeId ? selectedMenuItemClass : menuItemClass}
-          />
-        ))}
-        <li>
-          <a href={pdfPath} target="_blank" className={menuItemClass}>
+    <div className="fixed bottom-0 right-0 h-screen w-1/4 mr-[4%] mb-[6%] md:p-0 mt-4 justify-end items-end flex-col hidden md:flex">
+      <Fade delay={2000} cascade damping={0.1}>
+        <ul className="text-xl">
+          {ids.map((id) => (
+            <NavItem
+              name={capitalize(id)}
+              key={`menu-item-${id}`}
+              className={
+                id === activeId ? selectedMenuItemClass : menuItemClass
+              }
+            />
+          ))}
+          <li>
+            <a href={pdfPath} target="_blank" className={menuItemClass}>
               <p>&#62; Get Resume</p>
-          </a>
-        </li>
-      </ul>
+            </a>
+          </li>
+        </ul>
+      </Fade>
     </div>
   );
 };

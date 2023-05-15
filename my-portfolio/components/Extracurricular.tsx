@@ -6,10 +6,10 @@ type Props = {};
 
 const Extracurricular = (props: Props) => {
   return (
-    <section id="extracurricular">
+    <section id="extracurricular" className="mx-8 lg:mx-0">
       <div>
         <Fade delay={250} duration={2000} triggerOnce>
-          <h1 className="mb-12 px-8 lg:px-0 text-5xl md:text-7xl text-left lg:text-right  lg:mr-[20%] font-bold bg-gradient-to-l from-green-400 to-[--color-theme] bg-clip-text text-transparent">
+          <h1 className="mb-12 text-5xl md:text-7xl text-left lg:text-right lg:mr-[20%] font-bold bg-gradient-to-l from-green-400 to-[--color-theme] bg-clip-text text-transparent">
             Extracurricular
           </h1>
           <Slide duration={1000} direction="right">

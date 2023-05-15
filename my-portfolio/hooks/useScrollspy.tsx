@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 const useScrollspy = (ids: string[], offset: number = 0) => {
   const [activeId, setActiveId] = useState("");
@@ -11,7 +11,7 @@ const useScrollspy = (ids: string[], offset: number = 0) => {
   const isBetween = (value: number, floor: number, ceil: number) =>
     value >= floor && value <= ceil;
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const listener = () => {
       const scroll = window.pageYOffset;
 
@@ -32,7 +32,7 @@ const useScrollspy = (ids: string[], offset: number = 0) => {
     };
 
     listener();
-    
+
     window.addEventListener("resize", listener);
     window.addEventListener("scroll", listener);
 
