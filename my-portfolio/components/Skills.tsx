@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card";
+import SkillList from "./SkillList";
 import { BsClipboardDataFill, BsCodeSquare } from "react-icons/bs";
 import { FaCodeBranch, FaCube, FaEdit } from "react-icons/fa";
 import { Fade } from "react-awesome-reveal";
@@ -13,12 +13,12 @@ const Skills = (props: Props) => {
       className="grid justify-start lg:justify-center text-center"
     >
       <div className="grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-1 lg:gap-y-10">
-        <Fade duration={2000} triggerOnce cascade damping={0.1}>
+        <Fade delay={500} duration={2000} triggerOnce cascade damping={0.1}>
           <h1 className="text-5xl md:text-7xl font-bold text-center md:text-left lg:text-center bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent">
             Skills
           </h1>
           <div className="flex-wrap flex gap-y-8 gap-x-12">
-            <Card
+            <SkillList
               header="Front-end"
               text={
                 <ul>
@@ -31,7 +31,7 @@ const Skills = (props: Props) => {
               }
               icon={<BsCodeSquare />}
             />
-            <Card
+            <SkillList
               header="Back-end"
               text={
                 <ul>
@@ -45,7 +45,7 @@ const Skills = (props: Props) => {
               }
               icon={<FaCodeBranch />}
             />
-            <Card
+            <SkillList
               header="Data Science"
               text={
                 <ul>
@@ -59,7 +59,7 @@ const Skills = (props: Props) => {
               }
               icon={<BsClipboardDataFill />}
             />
-            <Card
+            <SkillList
               header="Tools & Platforms"
               icon={<FaEdit />}
               text={
@@ -74,7 +74,7 @@ const Skills = (props: Props) => {
                 </ul>
               }
             />
-            <Card
+            <SkillList
               header="Coursework"
               text={
                 <ul>

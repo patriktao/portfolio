@@ -1,26 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BsCodeSlash } from "react-icons/bs";
 
 interface Props {
-  header: String;
+  header?: String;
   icon?: JSX.Element;
   text?: JSX.Element;
 }
 
 const Card = (props: Props) => {
-  return (
-    <div className="min-w-full md:min-w-0 bg-transparent flex flex-col items-center">
-      <div className="text-3xl mb-4 text-gray-500 dark:text-gray-400">
-        {props.icon}
-      </div>
-      <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-        {props.header}
-      </h5>
-      <div className="mb-3 text-md text-gray-500 dark:text-gray-400">
-        {props.text}
-      </div>
-    </div>
-  );
+  const handleOnMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    const { currentTarget: target } = e;
+
+    const rect = target.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+  };
+
+  useEffect(() => {
+    const attachMouseMoveEvent = () => {
+      const cards = document.querySelectorAll<HTMLDivElement>(".card");
+      cards.forEach((card) => {
+        card.addEventListener("mousemove", handleOnMouseMove);
+      });
+    };
+
+    attachMouseMoveEvent();
+    return () => {
+      const cards = document.querySelectorAll<HTMLDivElement>(".card");
+      cards.forEach((card) => {
+        card.removeEventListener("mousemove", handleOnMouseMove);
+      });
+    };
+  }, []);
+
+  return <div className="card"></div>;
 };
 
 export default Card;
