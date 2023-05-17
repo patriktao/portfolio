@@ -24,14 +24,9 @@ const Portfolio = (props: Props) => {
         <h1 className="font-bold text-5xl md:text-7xl  text-left lg:text-center mb-12 bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent">
           Portfolio
         </h1>
-        <div id="cards">
+        <ol id="cards">
           <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </div>
+        </ol>
       {/* <Fade delay={250} duration={2000} triggerOnce>
       </Fade> */}
     </section>

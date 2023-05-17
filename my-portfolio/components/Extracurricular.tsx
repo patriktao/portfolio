@@ -12,7 +12,7 @@ const Extracurricular = (props: Props) => {
           <h1 className="mb-12 text-5xl md:text-7xl text-left lg:text-right lg:mr-[20%] font-bold bg-gradient-to-l from-green-400 to-[--color-theme] bg-clip-text text-transparent">
             Extracurricular
           </h1>
-          <Slide duration={1000} direction="right">
+          <Slide delay={500} duration={1000} direction="right">
             <ol className="border-l border-neutral-300 dark:border-neutral-500 md:flex md:justify-center md:gap-6 md:border-l-0 md:border-t">
               <Timepoint
                 date="2019"

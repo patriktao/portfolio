@@ -11,7 +11,7 @@ const ProjectImage = ({ src, title }: Props) => {
   return (
     <Image
       alt={title}
-      className="max-w-md border-2 border-neutral-600 rounded-lg"
+      className="max-w-lg border-2 border-neutral-600 rounded-lg"
       src={src}
     />
   );
