@@ -43,17 +43,6 @@ const icons = (
         <FaGithub className="text-white dark:text-black" />
       </ClickableIcon>
     </a>
-    <Link
-      href="#"
-      onClick={(e) => {
-        window.location.href = "mailto:patriktao@gmail.com";
-        e.preventDefault();
-      }}
-    >
-      <ClickableIcon>
-        <AiOutlineMail className="text-white dark:text-black" />
-      </ClickableIcon>
-    </Link>
     <Link href={pdfPath} target="_blank">
       <ClickableIcon>
         <BsFillPersonLinesFill className="text-white dark:text-black" />
@@ -96,7 +85,7 @@ const InfoSection = (
     <p className="font-regular text-lg text-gray-800 sm:max-w-[75%] dark:text-gray-300 text-left">
       I’m focused on building user-friendly front-end applications and scalable
       back-end software. I am a fourth year Computer Science student at Lund
-      University in Sweden.
+      University in Sweden 📍.
     </p>
 
     {GetInTouchButton}
@@ -131,7 +120,7 @@ const Home = (props: Props) => {
         </div>
         <div
           title="image-section"
-          className="md:col-span-2 lg:col-span-3 lg:w-[100%] sm:w-[55%]"
+          className="md:col-span-2 lg:col-span-3 lg:w-[100%] md:w-[75%] sm:w-[55%]"
         >
           {ImageSection}
         </div>

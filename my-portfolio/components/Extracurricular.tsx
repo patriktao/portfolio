@@ -6,10 +6,10 @@ type Props = {};
 
 const Extracurricular = (props: Props) => {
   return (
-    <section id="extracurricular" className="mx-8 lg:mx-0">
+    <section id="extracurricular" className=" lg:mx-0">
       <div>
         <Fade delay={500} duration={2000} triggerOnce>
-          <h1 className="mb-12 text-5xl md:text-7xl text-left lg:text-right lg:mr-[20%] font-bold bg-gradient-to-l from-green-400 to-[--color-theme] bg-clip-text text-transparent">
+          <h1 className="mb-12 text-5xl md:text-7xl text-left lg:ml-[10%] font-bold  bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent ">
             Extracurricular
           </h1>
           <Slide delay={500} duration={1000} direction="right">
@@ -30,25 +30,25 @@ const Extracurricular = (props: Props) => {
                 date="2021 - 2022"
                 title="Head of Information Technology"
                 subtitle="East Asia Student Association"
-                text="Created and maintained the website and provided IT support to the organisation"
+                text="Created and maintained the website."
               />
               <Timepoint
                 date="2022"
                 title="Flow Manager"
                 subtitle="Lund Carnival"
-                text="Ensured that the amount of people on the dancefloor matched safety regulations."
+                text="The largest student-organised carnival in the world held every 4th year."
               />
               <Timepoint
                 date="2022"
                 title="International Mentor"
                 subtitle="Lund University"
-                text="Introduced new international/exchange students to the Computer Engineering guild at the Faculty of Engineering"
+                text="Introduced and organised event for new exchange students"
               />
               <Timepoint
                 date="2022"
                 title="Member"
                 subtitle="Nova Talent"
-                text="Nova is a global by-invitation-only top talent network that enables the world's young professionals and students to share, learn and connect with each other."
+                text="A global by-invitation-only top talent network that enables the world's young professionals and students to share, learn and connect with each other."
               />
               <Timepoint
                 date="2022 - 2023"

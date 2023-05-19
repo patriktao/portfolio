@@ -21,12 +21,15 @@ const Portfolio = (props: Props) => {
       id="portfolio"
       className="flex h-screen items-center overflow-hidden p-0 m-0 justify-center flex-col"
     >
-        <h1 className="font-bold text-5xl md:text-7xl  text-left lg:text-center mb-12 bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent">
-          Portfolio
-        </h1>
-        <ol id="cards">
-          <Card />
-        </ol>
+      <p className="text-base text-lg font-medium leading-7 text-gray-700 dark:text-white mb-4">
+        Each project serves a purpose to make a sustainable difference in our world
+      </p>
+      <h1 className="font-bold text-5xl md:text-7xl  text-left lg:text-center mb-12 bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent">
+        Portfolio
+      </h1>
+      <ol id="cards">
+        <Card />
+      </ol>
       {/* <Fade delay={250} duration={2000} triggerOnce>
       </Fade> */}
     </section>
