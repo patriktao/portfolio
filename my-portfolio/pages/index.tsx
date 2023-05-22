@@ -12,16 +12,18 @@ import Home from "@/components/Home";
 export default function MyPortfolio() {
   return (
     <Background>
-      <NavBar />
-      <div className="z-10 flex flex-wrap content-evenly">
-        <Home />
-        <About />
-        <Skills />
-        <WorkExperience />
-        <Extracurricular />
-        <Portfolio />
-      </div>
-      <LowerNavBar />
+      <main className="p-[2rem] h-min-screen w-max-screen">
+        <NavBar />
+        <div className="z-10 flex flex-col">
+          <Home />
+          <About />
+          <Skills />
+          <WorkExperience />
+          <Extracurricular />
+          <Portfolio />
+        </div>
+        <LowerNavBar />
+      </main>
     </Background>
   );
 }

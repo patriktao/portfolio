@@ -8,7 +8,7 @@ interface Props {
 const Background = ({ children }: Props) => {
   return (
     <div className="absolute inset-x-0 top-0 z-50">
-      <div className="relative isolate p-[2rem]">
+      <div className="relative isolate">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"

@@ -6,13 +6,13 @@ type Props = {};
 
 const Extracurricular = (props: Props) => {
   return (
-    <section id="extracurricular" className=" lg:mx-0">
+    <section id="extracurricular" className=" lg:mx-0 overflow-hidden">
       <div>
-        <Fade delay={500} duration={2000} triggerOnce>
-          <h1 className="mb-12 text-5xl md:text-7xl text-left lg:ml-[10%] font-bold  bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent ">
+        <Fade duration={2000} triggerOnce>
+          <h1 className="mb-12 text-4xl sm:text-7xl text-left lg:text-right lg:mr-[20%] font-bold  bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent ">
             Extracurricular
           </h1>
-          <Slide delay={500} duration={1000} direction="right">
+          <Slide duration={1000} direction="right">
             <ol className="border-l border-neutral-300 dark:border-neutral-500 md:flex md:justify-center md:gap-6 md:border-l-0 md:border-t">
               <Timepoint
                 date="2019"
@@ -28,7 +28,7 @@ const Extracurricular = (props: Props) => {
               />
               <Timepoint
                 date="2021 - 2022"
-                title="Head of Information Technology"
+                title="Head of IT"
                 subtitle="East Asia Student Association"
                 text="Created and maintained the website."
               />

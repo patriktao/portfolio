@@ -3,7 +3,7 @@ import React, { ReactNode, useEffect } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaLinkedinIn, FaGithub, FaDownload } from "react-icons/fa";
-import profile from "../images/profile.png";
+import image2 from "../images/image2.png";
 import Image from "next/image";
 import getConfig from "next/config";
 import { Fade } from "react-awesome-reveal";
@@ -79,7 +79,7 @@ const InfoSection = (
         Patrik.
       </span>
     </p>
-    <p className="text-left font-bold text-6xl text-gray-800 dark:text-white mb-3">
+    <p className="text-left font-bold text-6xl md:text-7xl text-gray-800 dark:text-white mb-3">
       Nice to meet you.
     </p>
     <p className="font-regular text-lg text-gray-800 sm:max-w-[75%] dark:text-gray-300 text-left">
@@ -97,9 +97,9 @@ const ImageSection = (
   <Fade delay={1500} duration={1000} triggerOnce>
     <Image
       data-tooltip-target="tooltip-default"
-      src={profile}
+      src={image2}
       alt="profile"
-      className="rounded-lg hover:scale-105 duration-200 ease-in shadow-xl"
+      className="rounded-lg hover:scale-105 duration-100 ease-in "
     />
   </Fade>
 );
@@ -109,18 +109,18 @@ const Home = (props: Props) => {
     <section
       id="home"
       title="home-section"
-      className="grid h-screen mb-32 mt-[5rem] md:mt-0"
+      className="grid h-min-screen lg:h-screen m-0 pt-24 lg:pt-0 pb-0 justify-center"
     >
       <div
         title="container"
-        className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-10 max-w-5xl items-center gap-y-8 gap-x-4"
+        className="max-w-5xl flex flex-wrap flex-col md:grid md:grid-cols-6 lg:grid-cols-12 items-center gap-y-8 gap-x-4"
       >
-        <div title="info-section" className="md:col-span-4 lg:col-span-7">
+        <div title="info-section" className="md:col-span-4 lg:col-span-8">
           {InfoSection}
         </div>
         <div
           title="image-section"
-          className="md:col-span-2 lg:col-span-3 lg:w-[100%] md:w-[75%] sm:w-[55%]"
+          className="md:col-span-2 lg:col-span-4 lg:w-[100%] md:w-[75%] sm:w-[55%]"
         >
           {ImageSection}
         </div>
