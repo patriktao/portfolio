@@ -23,10 +23,12 @@ const PortfolioItem = ({
     <div className="grid-span-1">
       <p className="mb-1 text-neutral-500 dark:text-neutral-300">{date}</p>
       <div className="flex items-center mb-4 gap-x-2">
-        <h2 className="text-3xl font-bold">{header}</h2>
+        <h2 className="text-3xl font-bold dark:text-white text-gray-700">
+          {header}
+        </h2>
         {headerIcon}
       </div>
-      <p className="text-lg mb-10">{subheader}</p>
+      <p className="text-lg mb-10 dark:text-gray-200 font-normal text-gray-600">{subheader}</p>
       {icons}
     </div>
   );

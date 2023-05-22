@@ -1,6 +1,4 @@
 import Link from "next/link";
-import React, { ReactNode, useEffect } from "react";
-import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaLinkedinIn, FaGithub, FaDownload } from "react-icons/fa";
 import image2 from "../images/image2.png";
@@ -19,7 +17,7 @@ const { publicRuntimeConfig } = getConfig();
 
 const pdfPath = publicRuntimeConfig.PDF_PATH;
 
-const ClickableIcon = ({ children, className }: Icon) => {
+const ClickableIcon = ({ children }: Icon) => {
   return (
     <div className="rounded-full text-2xl shadow-none dark:shadow-lg shadow-gray-300 p-3 cursor-pointer hover:scale-110 ease-in duration-100 bg-gray-800 dark:bg-white hover:bg-gradient-to-r hover:from-green-400 hover:to-[--color-theme] shadow-lg">
       {children}
@@ -67,7 +65,7 @@ const GetInTouchButton = (
 
 const InfoSection = (
   <Fade delay={1000} cascade damping={0.1} duration={1500} triggerOnce>
-    <p className="uppercase text-sm tracking-widest mb-4 font-regular">
+    <p className="uppercase text-sm tracking-widest mb-4 font-regular text-black dark:text-white">
       Let&#39;s build something{" "}
       <span className="bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent">
         together.

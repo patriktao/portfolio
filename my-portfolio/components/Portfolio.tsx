@@ -2,16 +2,14 @@ import React from "react";
 import Image from "next/image";
 import personalWebsite from "../images/personalWebsite.png";
 import memberflow from "../images/memberflow.png";
-import ecofinder from "../images/ecofinder.png";
+import ecofinder3 from "../images/ecofinder3.png";
 import acclab from "../images/acclab.png";
 import Link from "next/link";
-import { FaFigma, FaGithub, FaLeaf, FaMicrophone } from "react-icons/fa";
+import { FaFigma, FaGithub, FaLeaf } from "react-icons/fa";
 import Icons from "./icons/Icons";
 import PortfolioItem from "./PortfolioItem";
-import Carousel from "./Carousel";
 import illustration2 from "../images/illustration2.png";
 import voicy from "../images/voicy.png";
-import { BsMic } from "react-icons/bs";
 import { Fade } from "react-awesome-reveal";
 
 type Props = {};
@@ -151,7 +149,7 @@ const Portfolio = (props: Props) => {
               <Image
                 src={voicy}
                 alt="voicy"
-                className="rounded-2xl shadow-2xl hidden sm:block"
+                className="shadow-2xl rounded-2xl hidden sm:block"
               />
             }
             direction="right"
@@ -209,9 +207,9 @@ const Portfolio = (props: Props) => {
             }
             image={
               <Image
-                src={ecofinder}
+                src={ecofinder3}
                 alt="ecofinder"
-                className="hidden sm:block"
+                className="hidden sm:block rounded-2xl shadow-2xl"
               />
             }
             direction="right"
