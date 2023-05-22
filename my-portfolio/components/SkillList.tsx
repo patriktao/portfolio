@@ -16,7 +16,7 @@ const SkillList = (props: Props) => {
       <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
         {props.header}
       </h5>
-      <div className="mb-3 text-md text-gray-500 dark:text-gray-400">
+      <div className="mb-3 text-md text-gray-800 dark:text-gray-300">
         {props.text}
       </div>
     </div>

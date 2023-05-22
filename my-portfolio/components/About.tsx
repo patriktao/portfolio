@@ -44,7 +44,7 @@ const About = (props: Props) => {
     <section
       title="about"
       id="about"
-      className="block h-screen grid relative lg:mt-0"
+      className="block grid relative lg:mt-0"
     >
       <div
         title="container"

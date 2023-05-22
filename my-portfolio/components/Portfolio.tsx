@@ -22,8 +22,7 @@ const Portfolio = (props: Props) => {
     >
       <Fade triggerOnce>
         <p className="text-base text-lg font-medium leading-7 text-gray-700 dark:text-white mb-4">
-          I strive to create products that can make a sustainable difference in
-          our world
+          I have passion and curiosity for solutions that can make a sustainable difference.
         </p>
         <h1 className="font-bold text-5xl md:mb-24 mb-8 md:text-7xl text-left lg:text-center bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent">
           Featured Projects
@@ -136,7 +135,7 @@ const Portfolio = (props: Props) => {
 
         <Fade duration={2000} triggerOnce>
           <PortfolioItem
-            date="Okt 2021 - Jan 2021"
+            date="Oct 2021 - Jan 2021"
             header={<div>Voicy</div>}
             subheader={`In 8 weeks, we developed a product to battle the increased mental illnesses arising from lack of human social interaction during COVID-19. Many recent studies have highlighted the advantages that voice messages have over text messages. Consequently, we prototyped and developed a business model for Voicy, an mobile app dedicated to create meaningful exchanges through voice communication among friends. 
         `}
@@ -183,7 +182,7 @@ const Portfolio = (props: Props) => {
 
         <Fade duration={2000} triggerOnce>
           <PortfolioItem
-            date="Okt 2020 - Jan 2021"
+            date="Oct 2020 - Jan 2021"
             header={
               <div className="flex">
                 EcoFinder

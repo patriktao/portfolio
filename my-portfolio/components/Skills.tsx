@@ -10,7 +10,7 @@ const Skills = (props: Props) => {
   return (
     <section
       id="skills"
-      className="grid justify-start lg:justify-center text-center mt-44"
+      className="grid justify-start lg:justify-center text-center mt-44 md:mt-0"
     >
       <div className="grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 lg:mx-0 lg:max-w-none lg:grid-cols-1 lg:gap-y-10">
           <Fade duration={1000} triggerOnce cascade damping={0.1}>
