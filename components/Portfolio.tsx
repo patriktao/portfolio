@@ -31,7 +31,7 @@ const Portfolio = (props: Props) => {
       </Fade>
       <div
         title="wrapper"
-        className="flex flex-wrap md:flex-nowrap md:flex-col lg:max-w-6xl gap-y-24"
+        className="flex flex-wrap md:flex-nowrap md:flex-col lg:max-w-5xl gap-y-24"
       >
         <Fade duration={2000} triggerOnce>
           <PortfolioItem
