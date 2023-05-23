@@ -44,7 +44,7 @@ const LowerNavBar = (props: Props) => {
   }
 
   return (
-    <div className="fixed bottom-0 right-0 h-screen w-1/4 mr-[4%] mb-[6%] md:p-0 mt-4 justify-end items-end flex-col hidden md:flex">
+    <div className="fixed bottom-0 right-0 h-screen max-w-1/4 mr-[4%] mb-[6%] md:p-0 mt-4 justify-end items-end flex-col hidden md:flex">
       <Fade delay={2000} cascade damping={0.1}>
         <ul className="text-xl">
           {ids.map((id) => (

@@ -28,7 +28,7 @@ const PortfolioItem = ({
         </h2>
         {headerIcon}
       </div>
-      <p className="text-lg mb-10 dark:text-gray-300 font-normal text-gray-800">{subheader}</p>
+      <p className="text-lg font-normal mb-10 dark:text-gray-300 text-gray-800">{subheader}</p>
       {icons}
     </div>
   );

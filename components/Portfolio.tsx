@@ -22,7 +22,8 @@ const Portfolio = (props: Props) => {
     >
       <Fade triggerOnce>
         <p className="text-base text-lg font-medium leading-7 text-gray-700 dark:text-white mb-4">
-          I have passion and curiosity for solutions that can make a sustainable difference.
+          I have passion and curiosity for solutions that can make a sustainable
+          difference.
         </p>
         <h1 className="font-bold text-5xl md:mb-24 mb-8 md:text-7xl text-left lg:text-center bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent">
           Featured Projects
