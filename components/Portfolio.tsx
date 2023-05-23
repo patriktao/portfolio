@@ -54,6 +54,7 @@ const Portfolio = (props: Props) => {
                 <Icons.NextIcon />
                 <Icons.TailwindIcon />
                 <Icons.TsIcon />
+                <Icons.FigmaIcon />
               </div>
             }
             image={
