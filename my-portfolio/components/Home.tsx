@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaLinkedinIn, FaGithub, FaDownload } from "react-icons/fa";
-import image2 from "../images/image2.png";
+import image1 from "../images/image1.png";
 import Image from "next/image";
 import getConfig from "next/config";
 import { Fade } from "react-awesome-reveal";
