@@ -85,7 +85,7 @@ const Portfolio = (props: Props) => {
           current challenges of tracking memberships and member requests. We
           provide an efficient solution for buying, renewing, and cancelling
           digital student membership cards. We integrate payment methods
-          such as Swipe and Swish.`}
+          such as Stripe and Swish.`}
             icons={
               <div className="flex flex-row gap-x-4 h-8">
                 <Icons.NextIcon />

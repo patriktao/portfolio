@@ -42,7 +42,7 @@ const Extracurricular = (props: Props) => {
                 date="2022"
                 title="International Mentor"
                 subtitle="Lund University"
-                text="Introduced and organised event for new exchange students"
+                text="Introduced and organised events for new exchange students"
               />
               <Timepoint
                 date="2022"
