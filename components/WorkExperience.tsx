@@ -30,9 +30,9 @@ const WorkExperience = (props: Props) => {
               />
               <Timepoint
                 date="Aug 2021 - May 2022"
-                title="Full Stack Developer"
+                title="Student Talent Consultant"
                 subtitle="Tetra Pak"
-                text="Part of Student Talent Programme. Developed a logistics management system for food technologists"
+                text="Part of Student Talent Programme. Worked as a full-stack developer and built a logistics management system for food technologists"
               />
               <Timepoint
                 date="Feb 2023 - Current"
