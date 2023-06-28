@@ -21,7 +21,6 @@ const WorkExperience = (props: Props) => {
                 subtitle="Arkad"
                 text="Developed an online company-student interaction platform during COVID-19"
               />
-
               <Timepoint
                 date="Jun 2021 - Aug 2021"
                 title="Summer Intern"
@@ -40,6 +39,13 @@ const WorkExperience = (props: Props) => {
                 subtitle="Sony Europe"
                 text="Project Management Intern. Learning PM fundamentals in OSV projects. Creating cost estimations, managing prototypes and open-source releases."
               />
+              <Timepoint
+                date="Feb 2023 - Current"
+                title="Summer Project Manager Intern"
+                subtitle="Sony Europe"
+                text="Covering project managers, overseeing and tracking issues and issue trends for System Dev, Verification, and CM while creating business insights for PM."
+              />
+              F
             </ol>
           </Slide>
         </Fade>
