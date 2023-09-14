@@ -43,7 +43,7 @@ const WorkExperience = (props: Props) => {
                 date="Feb 2023 - Current"
                 title="Summer Project Manager Intern"
                 subtitle="Sony Europe"
-                text="Covering project managers, overseeing and tracking issues and issue trends for System Dev, Verification, and CM while creating business insights for PM."
+                text="Covering project managers, overseeing and tracking issues and issue trends for System Dev, Verification, and CM while running cost simulations for various release, outsourcing, and resource allocation programs."
               />
               F
             </ol>
