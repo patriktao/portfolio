@@ -66,9 +66,9 @@ const GetInTouchButton = (
 const InfoSection = (
   <Fade delay={1000} cascade damping={0.1} duration={1500} triggerOnce>
     <p className="uppercase text-sm tracking-widest mb-4 font-regular text-black dark:text-white">
-      Let&#39;s build something{" "}
+      {">"} Let&#39;s{" "}
       <span className="bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent">
-        together.
+        connect.
       </span>{" "}
     </p>
     <p className="text-left font-bold text-6xl md:text-7xl text-gray-800 dark:text-white mb-3">
@@ -81,9 +81,9 @@ const InfoSection = (
       Nice to meet you.
     </p>
     <p className="font-regular text-lg text-gray-800 sm:max-w-[75%] dark:text-gray-300 text-left">
-      I’m focused on building user-friendly front-end applications and scalable
-      back-end software. I am a fourth year Computer Science student at Lund
-      University in Sweden 📍.
+      I’m dedicated to developing scalable products in the intersection of
+      technology, business, and design. Currently, I am a final year Computer Science
+      student at Lund University in Sweden.
     </p>
 
     {GetInTouchButton}

@@ -139,7 +139,7 @@ const Portfolio = (props: Props) => {
           <PortfolioItem
             date="Oct 2021 - Jan 2021"
             header={<div>Voicy</div>}
-            subheader={`In 8 weeks, we developed a product to battle the increased mental illnesses arising from lack of human social interaction during COVID-19. Many recent studies have highlighted the advantages that voice messages have over text messages. Consequently, we prototyped and developed a business model for Voicy, an mobile app dedicated to create meaningful exchanges through voice communication among friends. 
+            subheader={`In 8 weeks, we developed a product to battle the increased mental illnesses arising from lack of human social interaction during COVID-19. Many recent studies have highlighted the advantages that voice messages have over text messages. Consequently, we prototyped and developed a lean business model for Voicy, an AI-powered voice messasing app dedicated to create meaningful exchanges. 
         `}
             icons={
               <div className="flex flex-row gap-x-4 h-8">

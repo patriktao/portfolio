@@ -9,7 +9,7 @@ type Props = {};
 
 const ids = [
   "home",
-  "about",
+  /* "about", */
   "skills",
   "experience",
   "extracurricular",
