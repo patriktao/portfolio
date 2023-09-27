@@ -81,9 +81,7 @@ const InfoSection = (
       Nice to meet you.
     </p>
     <p className="font-regular text-lg text-gray-800 sm:max-w-[75%] dark:text-gray-300 text-left">
-      I’m dedicated to developing scalable products in the intersection of
-      technology, business, and design. Currently, I am a final year Computer Science
-      student at Lund University in Sweden.
+      As a final year Computer Science student, I am driven by a passion for creating innovative software products in the intersection of technology, business, and design - from  <span className="underline">ideation</span> to <span className="underline">product launch</span>.
     </p>
 
     {GetInTouchButton}
