@@ -1,6 +1,14 @@
 import Link from "next/link";
-import { BsFillPersonLinesFill } from "react-icons/bs";
-import { FaLinkedinIn, FaGithub, FaDownload } from "react-icons/fa";
+import { BsEnvelope, BsFillPersonLinesFill } from "react-icons/bs";
+import {
+  FaLinkedinIn,
+  FaGithub,
+  FaDownload,
+  FaMailBulk,
+  FaMailchimp,
+  FaEnvelope,
+  FaEnvelopeSquare,
+} from "react-icons/fa";
 import image2 from "../images/image2.png";
 import Image from "next/image";
 import getConfig from "next/config";
@@ -28,6 +36,19 @@ const ClickableIcon = ({ children }: Icon) => {
 const icons = (
   <div className="flex gap-8 max-w-[330px] py-6">
     <a
+      href="#"
+      onClick={(e) => {
+        window.location.href = "mailto:patriktao@gmail.com";
+        e.preventDefault();
+      }}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <ClickableIcon>
+        <FaEnvelope className="text-white dark:text-black" />
+      </ClickableIcon>
+    </a>
+    <a
       href="https://www.linkedin.com/in/patriktao/"
       target="_blank"
       rel="noreferrer"
@@ -49,7 +70,7 @@ const icons = (
   </div>
 );
 
-const GetInTouchButton = (
+/* const GetInTouchButton = (
   <Link
     href="#"
     onClick={(e) => {
@@ -62,6 +83,7 @@ const GetInTouchButton = (
     </button>
   </Link>
 );
+ */
 
 const InfoSection = (
   <Fade delay={1000} cascade damping={0.1} duration={1500} triggerOnce>
@@ -81,10 +103,13 @@ const InfoSection = (
       Nice to meet you.
     </p>
     <p className="font-regular text-lg text-gray-800 sm:max-w-[75%] dark:text-gray-300 text-left">
-      As a final year Computer Science student, I am driven by a passion for creating innovative software products in the intersection of technology, business, and design - from  <span className="underline">ideation</span> to <span className="underline">product launch</span>.
+      As a final year Computer Science student, I am driven by a passion for
+      creating innovative software products in the intersection of technology,
+      business, and design.
+      <br />
+      {"->"} from <span className="underline">ideation</span> to{" "}
+      <span className="underline">product launch</span>
     </p>
-
-    {GetInTouchButton}
     {icons}
   </Fade>
 );
