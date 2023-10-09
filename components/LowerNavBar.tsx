@@ -11,8 +11,8 @@ const ids = [
   "home",
   /* "about", */
   "skills",
-  "experience",
-  "extracurricular",
+/*   "experience",
+  "extracurricular", */
   "portfolio",
 ];
 
