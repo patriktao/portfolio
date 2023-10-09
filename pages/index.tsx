@@ -18,8 +18,8 @@ export default function MyPortfolio() {
           <Home />
           {/* <About /> */}
           <Skills />
-          <WorkExperience />
-          <Extracurricular />
+{/*           <WorkExperience />
+          <Extracurricular /> */}
           <Portfolio />
         </div>
         <LowerNavBar />
