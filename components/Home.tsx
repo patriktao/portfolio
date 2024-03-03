@@ -62,53 +62,28 @@ const icons = (
         <FaGithub className="text-white dark:text-black" />
       </ClickableIcon>
     </a>
-    <Link href={pdfPath} target="_blank">
-      <ClickableIcon>
-        <BsFillPersonLinesFill className="text-white dark:text-black" />
-      </ClickableIcon>
-    </Link>
   </div>
 );
 
-/* const GetInTouchButton = (
-  <Link
-    href="#"
-    onClick={(e) => {
-      window.location.href = "mailto:patriktao@gmail.com";
-      e.preventDefault();
-    }}
-  >
-    <button className="mt-4 rounded-full px-4 py-2 bg-gradient-to-r from-green-400 to-[--color-theme] bg-gradient-to-r from-green-400 to-[--color-theme] hover:scale-90 ease-out duration-100 hover:opacity-90 text-white shadow-md">
-      Get in Touch
-    </button>
-  </Link>
-);
- */
-
 const InfoSection = (
   <Fade delay={1000} cascade damping={0.1} duration={1500} triggerOnce>
-    <p className="uppercase text-sm tracking-widest mb-4 font-regular text-black dark:text-white">
-      {">"} Let&#39;s{" "}
-      <span className="bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent">
-        connect.
-      </span>{" "}
-    </p>
     <p className="text-left font-bold text-6xl md:text-7xl text-gray-800 dark:text-white mb-3">
-      Hi. I&#39;m{" "}
+      {"> "}Hi, I am{" "}
       <span className="bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent">
         Patrik.
       </span>
     </p>
-    <p className="text-left font-bold text-6xl md:text-7xl text-gray-800 dark:text-white mb-3">
-      Nice to meet you.
+    <p className="font-regular text-lg text-gray-800 sm:max-w-[80%] dark:text-gray-300 text-left">
+      My expertise lies in steering software products towards success while
+      leveraging new technologies to tackle real customer challenges.
     </p>
-    <p className="font-regular text-lg text-gray-800 sm:max-w-[75%] dark:text-gray-300 text-left">
-      As a final year Computer Science student, I am driven by a passion for
-      creating innovative software products in the intersection of technology,
-      business, and design.
+
+    <p className="uppercase text-sm tracking-widest mt-4 font-regular text-black dark:text-white">
+      {"> "}Final Year MSc. Computer Science & Engineering.
       <br />
-      {"->"} from <span className="underline">ideation</span> to{" "}
-      <span className="underline">product launch</span>
+      {"> "}Specialization in <u>Software Engineering</u>.
+      <br />
+      {"> "}Lund University, Sweden (QS Rank 85).
     </p>
     {icons}
   </Fade>

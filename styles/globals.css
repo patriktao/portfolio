@@ -3,16 +3,7 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
-
-:root {
-  font-family: "Inter", "Man Rope", sans-serif;
-}
-
-@supports (font-variation-settings: normal) {
-  :root {
-    font-family: "Inter var", sans-serif;
-  }
-}
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;300;400;500;600;700;800&display=swap");
 
 :root {
   --foreground-rgb: 30, 41, 59;
@@ -20,7 +11,7 @@
   --background-end-rgb: 255, 255, 255;
   --gradient-text: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
   --gradient-bar: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%);
-  --color-bg: #040c18;
+  --color-bg: #14171f;
   --color-footer: #031b34;
   --color-blog: #042c54;
   --color-theme: #44d8b7;
@@ -31,20 +22,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: #14171f;
+    --background-start-rgb: #14171f;
+    --background-end-rgb: #14171f;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #14171f;
+  background: #14171f;
+  font-family: "Inter", "Man Rope", sans-serif;
 }
 
 html {

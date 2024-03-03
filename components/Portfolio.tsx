@@ -21,12 +21,8 @@ const Portfolio = (props: Props) => {
       className="flex flex-col w-full md:items-center content-center"
     >
       <Fade triggerOnce>
-        <p className="text-base text-lg font-medium leading-7 text-gray-700 dark:text-white mb-4">
-          I have passion and curiosity for solutions that can make a sustainable
-          difference.
-        </p>
-        <h1 className="font-bold text-5xl md:mb-24 mb-8 md:text-7xl text-left lg:text-center bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent">
-          Featured Projects
+        <h1 className="font-bold text-5xl md:text-7xl text-left md:mb-24 mb-8 lg:text-center bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent">
+          Portfolio
         </h1>
       </Fade>
       <div

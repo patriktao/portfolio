@@ -70,7 +70,12 @@ const NavBar = () => {
         <nav className="bg-transparent border-gray-200 dark:bg-transparent">
           <div className="max-w-screen flex justify-between items-center">
             <a href={"#home"}>
-              <span className="lg:pl-10 text-2xl font-semibold whitespace-nowrap dark:text-white text-gray-700 hover:bg-gradient-to-r hover:from-green-400 hover:to-[--color-theme] hover:bg-clip-text hover:text-transparent">
+              <span
+                className="lg:pl-10 text-2xl font-semibold whitespace-nowrap dark:text-white text-gray-700 hover:bg-gradient-to-r hover:from-green-400 hover:to-[--color-theme] hover:bg-clip-text hover:text-transparent 
+                hover:scale-110 ease-out duration-100
+              dark:hover:bg-gradient-to-r dark:hover:from-green-400 dark:hover:to-[--color-theme] dark:hover:bg-clip-text dark:hover:text-transparent
+              "
+              >
                 &#62; Patrik Tao
               </span>
             </a>

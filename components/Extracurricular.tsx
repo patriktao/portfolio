@@ -18,11 +18,10 @@ const Extracurricular = (props: Props) => {
                 date="2019"
                 title="Member"
                 subtitle="Helsingkrona Sorority"
-                text="Participated in social and fun activites for students at Lund University."
               />
               <Timepoint
                 date="2020"
-                title="Agile Introduction Course for Students"
+                title="Agile Introduction Course"
                 subtitle="Accenture"
                 text="Attended three virtual sessions and excercises for Introduction to Agile Mindset, Scrum, and Practicing Agile."
               />
@@ -45,16 +44,16 @@ const Extracurricular = (props: Props) => {
                 text="Introduced and organised events for new exchange students"
               />
               <Timepoint
-                date="2022"
-                title="Member"
-                subtitle="Nova Talent"
-                text="A global by-invitation-only top talent network that enables the world's young professionals and students to share, learn and connect with each other."
-              />
-              <Timepoint
                 date="2022 - 2023"
                 title="President"
                 subtitle="East Asia Student Association"
                 text="Arranged various events, lectures, and study trips to share academic knowledge about the East Asia region."
+              />
+              <Timepoint
+                date="2022 - Current"
+                title="Top Talent"
+                subtitle="Nova Talent"
+                text="A global by-invitation-only top talent network that enables the world's top 3% young professionals and students to share, learn and connect with each other."
               />
             </ol>
           </Slide>

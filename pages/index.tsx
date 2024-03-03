@@ -16,10 +16,10 @@ export default function MyPortfolio() {
         <NavBar />
         <div className="z-10 flex flex-col">
           <Home />
-          {/* <About /> */}
+          <About />
           <Skills />
-{/*           <WorkExperience />
-          <Extracurricular /> */}
+          <WorkExperience />
+          <Extracurricular />
           <Portfolio />
         </div>
         <LowerNavBar />

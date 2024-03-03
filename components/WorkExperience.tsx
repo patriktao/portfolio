@@ -19,33 +19,38 @@ const WorkExperience = (props: Props) => {
                 date="Mar 2021 - Nov 2021"
                 title="Software Developer"
                 subtitle="Arkad"
-                text="Developed an online company-student interaction platform during COVID-19"
+                text="Worked on the frontend of an career fair interaction platform during COVID-19."
               />
               <Timepoint
                 date="Jun 2021 - Aug 2021"
-                title="Summer Intern"
+                title="Summer Data Scientist Intern"
                 subtitle="Tetra Pak"
-                text="Worked with data science and assessed various IT strategies to reach business objectives"
+                text="Worked with data science and assessed various IT strategies to reach business objectives."
               />
               <Timepoint
                 date="Aug 2021 - May 2022"
-                title="Student Talent Consultant"
+                title="Part-Time Software Engineer"
                 subtitle="Tetra Pak"
-                text="Worked as a software engineer intern and built a logistics management system for food technologists"
+                text="Worked as a software engineer. Scoped, designed, and built a logistics management system for food technologists."
               />
               <Timepoint
-                date="Feb 2023 - Current"
-                title="Student Worker"
-                subtitle="Sony Europe"
-                text="Project Management Intern. Learning PM fundamentals in OSV projects. Creating cost estimations, managing prototypes and open-source releases."
+                date="Jan 2023 - Mar 2023"
+                title="Product Management"
+                subtitle="Cargo-Planner"
+                text="Market-driven product development and requirements engineering for software designed to automate and centralize updates of product screenshots in sales materials and technical documents."
               />
               <Timepoint
-                date="Feb 2023 - Current"
+                date="Feb 2023 - Dec 2023"
                 title="Project Manager Intern"
-                subtitle="Sony Europe"
+                subtitle="Sony Electronics"
                 text="Covering project managers, overseeing and tracking issues and issue trends for System Dev, Verification, and CM while running cost simulations for various release, outsourcing, and resource allocation programs."
               />
-              F
+              <Timepoint
+                date="Jan 2024 - May 2024"
+                title="Program/Product Manager Intern"
+                subtitle="Amazon"
+                text="Lead the division’s effort to secure data reliability in capital governance, optimizing the forecasting tool for informed, cost-saving decisions, yielding $ Millions in savings for a multi-billion dollar portfolio of investments across the EU."
+              />
             </ol>
           </Slide>
         </Fade>
