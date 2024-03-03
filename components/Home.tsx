@@ -21,10 +21,6 @@ interface Icon {
   className?: string;
 }
 
-const { publicRuntimeConfig } = getConfig();
-
-const pdfPath = publicRuntimeConfig.PDF_PATH;
-
 const ClickableIcon = ({ children }: Icon) => {
   return (
     <div className="rounded-full text-2xl shadow-none dark:shadow-lg shadow-gray-300 p-3 cursor-pointer hover:scale-110 ease-in duration-100 bg-gray-800 dark:bg-white hover:bg-gradient-to-r hover:from-green-400 hover:to-[--color-theme] shadow-lg">
@@ -78,13 +74,16 @@ const InfoSection = (
       leveraging new technologies to tackle real customer challenges.
     </p>
 
-    <p className="uppercase text-sm tracking-widest mt-4 font-regular text-black dark:text-white">
-      Final Year MSc. Computer Science & Engineering.
-      <br />
-      Specialization in <u>Software Engineering</u>.
-      <br />
-      Lund University, Sweden (QS Rank 85).
-    </p>
+    <div className="uppercase text-sm tracking-widest mt-4 font-regular text-black dark:text-white">
+      <p className="my-1">
+        {" "}
+        {"- "}Final Year MSc. Computer Science & Engineering.
+      </p>
+      <p className="my-1">
+        {"- "}Specialization in <u>Software Engineering</u>.
+      </p>
+      <p className="my-1">{"- "}Lund University, Sweden (QS Rank 85).</p>
+    </div>
     {icons}
   </Fade>
 );
