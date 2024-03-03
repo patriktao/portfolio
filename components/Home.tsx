@@ -79,11 +79,11 @@ const InfoSection = (
     </p>
 
     <p className="uppercase text-sm tracking-widest mt-4 font-regular text-black dark:text-white">
-      {"> "}Final Year MSc. Computer Science & Engineering.
+      Final Year MSc. Computer Science & Engineering.
       <br />
-      {"> "}Specialization in <u>Software Engineering</u>.
+      Specialization in <u>Software Engineering</u>.
       <br />
-      {"> "}Lund University, Sweden (QS Rank 85).
+      Lund University, Sweden (QS Rank 85).
     </p>
     {icons}
   </Fade>
