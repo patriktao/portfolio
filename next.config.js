@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   publicRuntimeConfig: {
-    PDF_PATH: "/CV.pdf",
+    PDF_PATH: "/Patrik_tao_CV.pdf",
   },
 };
 

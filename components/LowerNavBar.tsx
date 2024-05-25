@@ -1,9 +1,7 @@
 import useScrollspy from "@/hooks/useScrollspy";
 import getConfig from "next/config";
-import Link from "next/link";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
-import { FaDownload } from "react-icons/fa";
 
 type Props = {};
 
