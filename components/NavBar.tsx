@@ -4,92 +4,111 @@ import useScrollspy from "@/hooks/useScrollspy";
 import { Fade } from "react-awesome-reveal";
 import { replaceState } from "history-throttled";
 import { ThemeContext } from "@/contexts/ThemeContext";
-import {
-  BsMoon,
-  BsMoonFill,
-  BsMoonStarsFill,
-  BsStars,
-  BsSunFill,
-  BsSunriseFill,
-} from "react-icons/bs";
+import { BsMoonStarsFill, BsSunFill } from "react-icons/bs";
+
+const ids = [
+  "home",
+  "about",
+  "skills",
+  "experience",
+  "extracurricular",
+  "portfolio",
+];
+
+const menuItemClass = `block text-gray-700 rounded md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:hover:bg-gradient-to-r from-green-400 to-[--color-theme] md:hover:bg-clip-text md:hover:text-transparent hover:scale-110 ease-out duration-100`;
+const selectedMenuItemClass = `block md:border-0 md:p-0 bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent`;
+
+const NavItem = ({ name, className }) => (
+  <li>
+    <a href={`#${name.toLowerCase()}`} className={className}>
+      {name}
+    </a>
+  </li>
+);
+
+const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
 const NavBar = () => {
-  const ids = [
-    "home",
-    "about",
-    "skills",
-    "experience",
-    "extracurricular",
-    "portfolio",
-  ];
-
   const { getTheme, setTheme } = useContext(ThemeContext);
   const { publicRuntimeConfig } = getConfig();
   const pdfPath = publicRuntimeConfig.PDF_PATH;
 
   const activeId = useScrollspy(ids, 300);
 
-  if (typeof window !== "undefined") {
-    replaceState("Updated", activeId, `#${activeId}`);
-  }
-
   useEffect(() => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-      setTheme("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      setTheme("light");
-    }
-    /* 
-    const respectSystemTheme = () => {
-      // Whenever the user explicitly chooses to respect the OS preference
-      localStorage.removeItem("theme");
-    }; */
+    const currentTheme =
+      localStorage.theme ||
+      (window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light");
+    document.documentElement.classList.toggle("dark", currentTheme === "dark");
+    setTheme(currentTheme);
   }, [setTheme]);
 
-  const themeSwitch = () => {
-    if (document.documentElement.classList.contains("dark")) {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-      setTheme("light");
-      return;
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      replaceState("Updated", activeId, `#${activeId}`);
     }
-    document.documentElement.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-    setTheme("dark");
+  }, [activeId]);
+
+  const themeSwitch = () => {
+    const newTheme = document.documentElement.classList.contains("dark")
+      ? "light"
+      : "dark";
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
+    localStorage.setItem("theme", newTheme);
+    setTheme(newTheme);
   };
 
   return (
-    <div className="fixed top-0 px-2 pt-4 md:pt-14 nav-font z-40 w-full">
-      <Fade delay={500} triggerOnce>
-        <nav className="bg-transparent border-gray-200 dark:bg-transparent">
-          <div className="max-w-screen flex justify-between items-center">
-            <a href={"#home"}>
-              <span
-                className="lg:pl-10 text-2xl font-semibold whitespace-nowrap dark:text-white text-gray-700 hover:bg-gradient-to-r hover:from-green-400 hover:to-[--color-theme] hover:bg-clip-text hover:text-transparent 
-                hover:scale-110 ease-out duration-100
-              dark:hover:bg-gradient-to-r dark:hover:from-green-400 dark:hover:to-[--color-theme] dark:hover:bg-clip-text dark:hover:text-transparent
-              "
-              >
-                &#62; Patrik Tao
-              </span>
-            </a>
+    <nav className="fixed top-2 left-0 w-full z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 backdrop-blur-[12px] bg-white/50 dark:bg-gray-700/50 rounded-3xl shadow-sm border border-gray-100/20">
+        <div className="flex w-full justify-between items-center h-14">
+          <a href="#home">
+            <span className="text-xl font-semibold whitespace-nowrap dark:text-white text-gray-700 hover:bg-gradient-to-r hover:from-green-400 hover:to-[--color-theme] hover:bg-clip-text hover:text-transparent hover:scale-110 ease-out duration-100">
+              Patrik Tao
+            </span>
+          </a>
+
+          <div className="hidden lg:flex">
+            <ul className="flex flex-row space-x-6 text-md items-center">
+              {ids.map((id) => (
+                <NavItem
+                  name={capitalize(id)}
+                  key={id}
+                  className={
+                    id === activeId ? selectedMenuItemClass : menuItemClass
+                  }
+                />
+              ))}
+              <li>
+                <a href={pdfPath} target="_blank" rel="noopener noreferrer">
+                  <button className="text-md bg-gradient-to-r hover:scale-95 ease-out duration-100 from-green-400 to-[--color-theme] py-1 px-3 rounded-xl inline-flex items-center">
+                    <svg
+                      className="fill-current w-3 h-3 mr-2"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+                    </svg>
+                    <span>Resume</span>
+                  </button>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="flex gap-4">
             <a
               href={pdfPath}
               target="_blank"
-              className={
-                "md:hidden rounded-full px-2 py-2 bg-gradient-to-r from-green-400 to-[--color-theme] bg-gradient-to-r from-green-400 to-[--color-theme] hover:scale-90 ease-out duration-100 hover:opacity-90 text-white shadow-md mr-14"
-              }
+              rel="noopener noreferrer"
+              className="flex items-center lg:hidden text-black hover:underline dark:text-white"
             >
               Get Resume
             </a>
 
-            <label className="relative flex items-center cursor-pointer hidden md:block mr-[6%]">
+            {/* Theme switcher, hidden on mobile */}
+            <label className="relative flex items-center cursor-pointer ">
               <input
                 type="checkbox"
                 value=""
@@ -109,14 +128,11 @@ const NavBar = () => {
                   />
                 </div>
               </div>
-              {/*               <span className="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
-                {getTheme() === "light" ? "Light Mode" : "Dark Mode"}
-              </span> */}
             </label>
           </div>
-        </nav>
-      </Fade>
-    </div>
+        </div>
+      </div>
+    </nav>
   );
 };
 

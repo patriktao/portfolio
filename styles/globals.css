@@ -31,7 +31,7 @@
 body {
   color: #14171f;
   background: #14171f;
-  font-family: "Inter", "Man Rope", sans-serif;
+  font-family: "Inter", "-apple-system", "BlinkMacSystemFont", "Man Rope", sans-serif;
 }
 
 html {
