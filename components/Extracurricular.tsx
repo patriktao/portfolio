@@ -51,8 +51,8 @@ const Extracurricular = (props: Props) => {
               />
               <Timepoint
                 date="2022 - Current"
-                title="Top Talent"
-                subtitle="Nova Talent"
+                title="Nova Talent"
+                subtitle="Nova"
                 text="A global by-invitation-only top talent network that enables the world's top 3% young professionals and students to share, learn and connect with each other."
               />
             </ol>

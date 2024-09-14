@@ -70,8 +70,8 @@ const InfoSection = (
       </span>
     </p>
     <p className="font-regular text-lg text-gray-800 sm:max-w-[80%] dark:text-gray-300 text-left">
-      My expertise lies in steering software products towards success while
-      leveraging new technologies to tackle real customer challenges.
+      My expertise lies in steering software projects towards success while
+      leveraging new technologies to tackle real customer challenges. I work within technical project management, software development, and product. 
     </p>
 
     <div className="uppercase text-sm tracking-widest mt-4 font-regular text-black dark:text-white">
@@ -82,7 +82,7 @@ const InfoSection = (
       <p className="my-1">
         {"- "}Specialization in <u>Software Engineering</u>.
       </p>
-      <p className="my-1">{"- "}Lund University, Sweden (QS Rank 85).</p>
+      <p className="my-1">{"- "}Lund University, Sweden (QS Rank 75).</p>
     </div>
     {icons}
   </Fade>

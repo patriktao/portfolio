@@ -29,7 +29,7 @@ const WorkExperience = (props: Props) => {
               />
               <Timepoint
                 date="Aug 2021 - May 2022"
-                title="Part-Time Software Engineer"
+                title="Software Engineer"
                 subtitle="Tetra Pak"
                 text="Worked as a software engineer. Scoped, designed, and built a logistics management system for food technologists."
               />
@@ -41,13 +41,13 @@ const WorkExperience = (props: Props) => {
               />
               <Timepoint
                 date="Feb 2023 - Dec 2023"
-                title="Project Manager Intern"
+                title="Project Management Intern"
                 subtitle="Sony Electronics"
                 text="Covering project managers, overseeing and tracking issues and issue trends for System Dev, Verification, and CM while running cost simulations for various release, outsourcing, and resource allocation programs."
               />
               <Timepoint
                 date="Jan 2024 - May 2024"
-                title="Program/Product Manager Intern"
+                title="Program Management Intern"
                 subtitle="Amazon"
                 text="Lead the division’s effort to secure data reliability in capital governance, optimizing the forecasting tool for informed, cost-saving decisions, yielding $ Millions in savings for a multi-billion dollar portfolio of investments across the EU."
               />
