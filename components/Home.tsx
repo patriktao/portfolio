@@ -36,15 +36,18 @@ const InfoSection = (
     damping={0.1}
     duration={1500}
     triggerOnce
-    className="flex justify-center max-w-3xl"
+    className="flex justify-left 2xl:justify-center max-w-xl text-left 2xl:text-center"
   >
-    <p className="text-center font-bold text-6xl md:text-7xl text-gray-800 dark:text-white mb-3">
+    {/* Header */}
+    <p className="font-bold text-6xl md:text-7xl text-gray-800 dark:text-white mb-3">
       Hi, I am{" "}
       <span className="bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent">
         Patrik.
       </span>
     </p>
-    <p className="text-center font-regular text-lg text-gray-800 dark:text-gray-300">
+
+    {/* Main Text */}
+    <p className="font-regular text-lg text-gray-800 dark:text-gray-300">
       My expertise lies in leading software projects to success by leveraging
       cutting-edge technologies to solve complex customer challenges. I
       specialize in technical project management, software development, and
@@ -52,7 +55,8 @@ const InfoSection = (
       undertake.
     </p>
 
-    <div className="text-center uppercase text-sm tracking-widest mt-4 font-regular text-black dark:text-white">
+    {/* List */}
+    <div className="uppercase text-sm tracking-widest mt-4 font-regular text-black dark:text-white">
       <p className="my-1">
         {" "}
         {"> "}Final Year MSc. Computer Science & Engineering.
@@ -100,7 +104,7 @@ const ImageSection = (
       data-tooltip-target="tooltip-default"
       src={image4}
       alt="profile"
-      className="max-w-[280px]"
+      className="max-w-[280px] xl:max-w-[320px]"
     />
   </Fade>
 );
@@ -110,16 +114,16 @@ const Home = (props: Props) => {
     <section
       id="home"
       title="home-section"
-      className="grid h-min-screen lg:h-screen m-0 pt-24 lg:pt-0 pb-0 justify-center"
+      className="grid h-screen m-0 pt-24 lg:pt-0 pb-0 justify-center"
     >
       <div
         title="container"
-        className="flex flex-col max-w-5xl items-center justify-center"
+        className="flex flex-col md:flex-row 2xl:flex-col-reverse max-w-5xl items-center justify-center"
       >
-        <div title="image-section">{ImageSection}</div>
         <div title="info-section" className="md:col-span-4 lg:col-span-8">
           {InfoSection}
         </div>
+        <div title="image-section">{ImageSection}</div>
       </div>
     </section>
   );
