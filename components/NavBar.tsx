@@ -18,7 +18,7 @@ const ids = [
 const menuItemClass = `block text-gray-700 rounded md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:hover:bg-gradient-to-r from-green-400 to-[--color-theme] md:hover:bg-clip-text md:hover:text-transparent hover:scale-110 ease-out duration-100`;
 const selectedMenuItemClass = `block md:border-0 md:p-0 bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent`;
 
-const NavItem = ({ name, className }) => (
+const NavItem = ({ name, className }: { name: string; className?: string }) => (
   <li>
     <a href={`#${name.toLowerCase()}`} className={className}>
       {name}
@@ -26,7 +26,7 @@ const NavItem = ({ name, className }) => (
   </li>
 );
 
-const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 
 const NavBar = () => {
   const { getTheme, setTheme } = useContext(ThemeContext);
