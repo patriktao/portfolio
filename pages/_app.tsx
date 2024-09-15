@@ -1,5 +1,4 @@
 import "@/styles/globals.css";
-import "@/styles/component.css";
 import "../components/MacBook/MacBook.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "@/contexts/ThemeContext";

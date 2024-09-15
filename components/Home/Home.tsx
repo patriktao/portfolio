@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { BsEnvelope, BsFillPersonLinesFill } from "react-icons/bs";
 import {
   FaLinkedinIn,
@@ -9,9 +8,8 @@ import {
   FaEnvelope,
   FaEnvelopeSquare,
 } from "react-icons/fa";
-import image4 from "../images/image2.png";
+import image4 from "../../images/image2.png";
 import Image from "next/image";
-import getConfig from "next/config";
 import { Fade } from "react-awesome-reveal";
 
 type Props = {};

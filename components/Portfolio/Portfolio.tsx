@@ -1,15 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import personalWebsite from "../images/personalWebsite.png";
-import memberflow from "../images/memberflow.png";
-import ecofinder3 from "../images/ecofinder3.png";
-import acclab from "../images/acclab.png";
+import personalWebsite from "../../images/personalWebsite.png";
+import memberflow from "../../images/memberflow.png";
+import ecofinder3 from "../../images/ecofinder3.png";
+import acclab from "../../images/acclab.png";
 import Link from "next/link";
 import { FaFigma, FaGithub, FaLeaf } from "react-icons/fa";
-import Icons from "./icons/Icons";
+import Icons from "../icons/Icons";
 import PortfolioItem from "./PortfolioItem";
-import illustration2 from "../images/illustration2.png";
-import voicy from "../images/voicy.png";
+import illustration2 from "../../images/illustration2.png";
+import voicy from "../../images/voicy.png";
 import { Fade } from "react-awesome-reveal";
 
 type Props = {};

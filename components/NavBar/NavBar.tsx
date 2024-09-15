@@ -5,6 +5,7 @@ import { Fade } from "react-awesome-reveal";
 import { replaceState } from "history-throttled";
 import { ThemeContext } from "@/contexts/ThemeContext";
 import { BsMoonStarsFill, BsSunFill } from "react-icons/bs";
+import { useRef } from "react";
 
 const ids = [
   "home",
@@ -15,24 +16,13 @@ const ids = [
   "portfolio",
 ];
 
-const menuItemClass = `block text-gray-700 rounded md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:hover:bg-gradient-to-r from-green-400 to-[--color-theme] md:hover:bg-clip-text md:hover:text-transparent hover:scale-110 ease-out duration-100`;
-const selectedMenuItemClass = `block md:border-0 md:p-0 bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent`;
-
-const NavItem = ({ name, className }: { name: string; className?: string }) => (
-  <li>
-    <a href={`#${name.toLowerCase()}`} className={className}>
-      {name}
-    </a>
-  </li>
-);
-
-const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
+const menuItemClass = `hover:cursor-pointer block text-gray-700 rounded md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:hover:bg-gradient-to-r from-green-400 to-[--color-theme] md:hover:bg-clip-text md:hover:text-transparent hover:scale-110 ease-out duration-100`;
+const selectedMenuItemClass = `hover:cursor-pointer block md:border-0 md:p-0 bg-gradient-to-r from-green-400 to-[--color-theme] bg-clip-text text-transparent`;
 
 const NavBar = () => {
   const { getTheme, setTheme } = useContext(ThemeContext);
   const { publicRuntimeConfig } = getConfig();
   const pdfPath = publicRuntimeConfig.PDF_PATH;
-
   const activeId = useScrollspy(ids, 300);
 
   useEffect(() => {
@@ -45,11 +35,32 @@ const NavBar = () => {
     setTheme(currentTheme);
   }, [setTheme]);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      replaceState("Updated", activeId, `#${activeId}`);
+  const NavItem = ({
+    name,
+    className,
+  }: {
+    name: string;
+    className?: string;
+  }) => (
+    <li>
+      <p className={className} onClick={() => scrollToSection(name.toLowerCase())}>
+        {name}
+      </p>
+    </li>
+  );
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth", // Enable smooth scrolling
+        block: "start", // Aligns the element to the top of the view
+      });
     }
-  }, [activeId]);
+  };
+
+  const capitalize = (str: string) =>
+    str.charAt(0).toUpperCase() + str.slice(1);
 
   const themeSwitch = () => {
     const newTheme = document.documentElement.classList.contains("dark")
@@ -62,16 +73,22 @@ const NavBar = () => {
 
   return (
     <nav className="fixed top-2 left-0 w-full z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 backdrop-blur-[12px] bg-white/50 dark:bg-gray-700/50 rounded-3xl shadow-sm border border-gray-100/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 backdrop-blur-[12px] bg-gray-100/50 dark:bg-gray-700/30 rounded-3xl shadow-sm border dark:border-gray-100/20">
         <div className="flex w-full justify-between items-center h-14">
-          <a href="#home">
+          {/* Clickable Website Name */}
+          <p
+            onClick={() => scrollToSection("home")}
+            className="hover:cursor-pointer"
+          >
             <span className="text-xl font-semibold whitespace-nowrap dark:text-white text-gray-700 hover:bg-gradient-to-r hover:from-green-400 hover:to-[--color-theme] hover:bg-clip-text hover:text-transparent hover:scale-110 ease-out duration-100">
               Patrik Tao
             </span>
-          </a>
+          </p>
 
+          {/* Menu List */}
           <div className="hidden lg:flex">
             <ul className="flex flex-row space-x-6 text-md items-center">
+              {/* Menu Items */}
               {ids.map((id) => (
                 <NavItem
                   name={capitalize(id)}
@@ -81,9 +98,11 @@ const NavBar = () => {
                   }
                 />
               ))}
+
+              {/* Download Resume Button */}
               <li>
                 <a href={pdfPath} target="_blank" rel="noopener noreferrer">
-                  <button className="text-md bg-gradient-to-r hover:scale-95 ease-out duration-100 from-green-400 to-[--color-theme] py-1 px-3 rounded-xl inline-flex items-center">
+                  <button className="text-md border border-1 border-gray-500 hover:text-white dark:text-white hover:border-none hover:bg-gradient-to-r hover:scale-105 ease-out duration-100 hover:from-green-400 hover:to-[--color-theme] py-1 px-3 rounded-xl inline-flex items-center">
                     <svg
                       className="fill-current w-3 h-3 mr-2"
                       xmlns="http://www.w3.org/2000/svg"
@@ -97,6 +116,8 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
+
+          {/* Get resume, only visible on mobiles */}
           <div className="flex gap-4">
             <a
               href={pdfPath}

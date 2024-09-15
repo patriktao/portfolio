@@ -1,5 +1,5 @@
 import React from "react";
-import Timepoint from "./Timepoint";
+import Timepoint from "../Timepoint";
 import { Fade, Slide } from "react-awesome-reveal";
 
 type Props = {};

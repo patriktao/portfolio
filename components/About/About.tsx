@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import aboutme from "../images/aboutme.jpg";
+import aboutme from "../../images/aboutme.jpg";
 import { Fade } from "react-awesome-reveal";
 
 type Props = {};
