@@ -43,7 +43,10 @@ const NavBar = () => {
     className?: string;
   }) => (
     <li>
-      <p className={className} onClick={() => scrollToSection(name.toLowerCase())}>
+      <p
+        className={className}
+        onClick={() => scrollToSection(name.toLowerCase())}
+      >
         {name}
       </p>
     </li>

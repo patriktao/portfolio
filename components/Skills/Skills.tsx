@@ -1,5 +1,4 @@
 import React from "react";
-import SkillList from "./SkillList";
 import { BsClipboardDataFill, BsCodeSquare } from "react-icons/bs";
 import { FaCodeBranch, FaCube, FaEdit } from "react-icons/fa";
 import { Fade } from "react-awesome-reveal";
