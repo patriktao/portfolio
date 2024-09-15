@@ -76,7 +76,7 @@ const NavBar = () => {
 
   return (
     <nav className="fixed top-2 left-0 w-full z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 backdrop-blur-[12px] bg-gray-100/50 dark:bg-gray-700/30 rounded-3xl shadow-sm border dark:border-gray-100/20">
+      <div className="max-w-7xl mx-[2rem] xl:mx-auto px-4 sm:px-6 lg:px-8 backdrop-blur-[12px] bg-gray-100/50 dark:bg-gray-700/30 rounded-3xl shadow-sm border dark:border-gray-100/20">
         <div className="flex w-full justify-between items-center h-14">
           {/* Clickable Website Name */}
           <p
