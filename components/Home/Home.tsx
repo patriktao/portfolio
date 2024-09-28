@@ -8,7 +8,7 @@ import {
   FaEnvelope,
   FaEnvelopeSquare,
 } from "react-icons/fa";
-import image4 from "../../images/image2.png";
+import image2 from "../../images/image2.png";
 import Image from "next/image";
 import { Fade } from "react-awesome-reveal";
 
@@ -100,9 +100,9 @@ const ImageSection = (
   <Fade delay={1500} duration={1000} triggerOnce>
     <Image
       data-tooltip-target="tooltip-default"
-      src={image4}
+      src={image2}
       alt="profile"
-      className="max-w-[280px] xl:max-w-[320px]"
+      className="max-w-[280px] xl:max-w-[320px] mb-8 ml-8 2xl:ml-0"
     />
   </Fade>
 );
