@@ -34,13 +34,12 @@ const imgSection = (
 
 const About = (props: Props) => {
   return (
-    <section title="about" id="about" className="block grid relative lg:mt-0">
+    <section id="about" className="block grid relative lg:mt-0">
       <div
-        title="container"
         className="grid grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto gap-x-12 items-center"
       >
-        <div title="info-section">{infoSection}</div>
-        <div title="image-section">{imgSection}</div>
+        <div>{infoSection}</div>
+        <div>{imgSection}</div>
       </div>
     </section>
   );

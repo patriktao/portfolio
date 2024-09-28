@@ -118,10 +118,10 @@ const Home = (props: Props) => {
         title="container"
         className="flex flex-col md:flex-row 2xl:flex-col-reverse max-w-5xl items-center justify-center"
       >
-        <div title="info-section" className="md:col-span-4 lg:col-span-8">
+        <div className="md:col-span-4 lg:col-span-8">
           {InfoSection}
         </div>
-        <div title="image-section">{ImageSection}</div>
+        <div>{ImageSection}</div>
       </div>
     </section>
   );
